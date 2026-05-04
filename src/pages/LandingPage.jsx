@@ -26,25 +26,19 @@ export default function LandingPage() {
   const formatTime = (time) => time < 10 ? `0${time}` : time;
 
   return (
-    <div className="landing-page" style={{fontFamily: "'Inter', sans-serif", background: '#050505', color: '#fff', position: 'relative'}}>
-      
-      {/* Efeito de Scanner */}
+    <div className="landing-page">
       <div className="scanline"></div>
 
-      {/* Banner Urgência */}
-      <div className="urgency-banner" style={{background: '#111', borderBottom: '1px solid #00f2ff33', color: '#888', textAlign: 'center', padding: '12px', fontSize: '0.85rem', letterSpacing: '2px', position: 'relative', zIndex: 100}}>
+      <div style={{background: '#111', borderBottom: '1px solid rgba(255,255,255,0.05)', color: '#888', textAlign: 'center', padding: '12px', fontSize: '0.85rem', letterSpacing: '2px', position: 'relative', zIndex: 100}}>
         VAGAS LIMITADAS — ENCERRA EM <span style={{color: '#fff', fontWeight: 'bold'}}>{formatTime(timeLeft.hours)}:{formatTime(timeLeft.minutes)}:{formatTime(timeLeft.seconds)}</span>
       </div>
 
-      {/* Hero Dinâmico */}
+      {/* Hero Section */}
       <section className="hero">
-        {/* Fundo Cyber Animado */}
         <div className="cyber-grid"></div>
-        <div className="hero-glow"></div>
-
-        <div className="hero-container" style={{position: 'relative', zIndex: 2}}>
+        <div className="content-wrap">
           <div className="tech-badge animate-slide-in">
-            A INTELIGÊNCIA ARTIFICIAL DOS RECRUTADORES
+            A IA QUE VENCE A IA DOS RECRUTADORES
           </div>
           
           <h1 className="hero-title animate-slide-in">
@@ -52,79 +46,83 @@ export default function LandingPage() {
             <span className="text-gradient">Consiga a vaga.</span>
           </h1>
           
+          <p className="hero-subtitle animate-slide-in">
+            Não seja ignorado por um robô. Nós descobrimos o que os filtros de recrutamento buscam e injetamos no seu currículo para garantir sua entrevista.
+          </p>
+          
           <div className="terminal-box animate-slide-in">
             <div className="typewriter">
-              &gt; Executando engenharia reversa ATS...
+              &gt; Executando engenharia reversa no ATS...
             </div>
           </div>
 
-          <div style={{marginTop: '4rem'}} className="animate-slide-in">
-            <a href={checkoutUrl} className="buy-button">
+          <div className="animate-slide-in" style={{marginTop: '2rem'}}>
+            <a href={checkoutUrl} className="buy-button accent">
               INICIAR BYPASS AGORA
             </a>
-            <p className="lifetime-text">
+            <p style={{marginTop: '1.5rem', fontSize: '0.85rem', color: 'var(--text-secondary)'}}>
               PAGAMENTO ÚNICO. ACESSO VITALÍCIO. R$ 47
             </p>
           </div>
         </div>
       </section>
 
-      {/* A Dor do Mercado Dev */}
-      <section className="pain-section">
+      {/* Pain Section */}
+      <section className="section-padding bg-surface">
         <div className="content-wrap">
-          <h2 className="section-title">4 anos de faculdade.<br/>Dezenas de projetos.<br/><span className="highlight-red">Rejeitado em 1 segundo.</span></h2>
-          <p className="section-desc">
-            A maior frustração do desenvolvedor hoje é passar anos estudando, dominar as tecnologias, aplicar para uma vaga e receber um <strong>"Infelizmente, decidimos seguir com outros candidatos"</strong> automático.
-          </p>
-          <div className="glow-card pain-alert">
-            <p>
-              A verdade? <strong>Nenhum ser humano leu seu currículo.</strong> Foi um robô que não achou as "palavras-chave invisíveis" e te descartou sem nem olhar seu código.
+          <div style={{maxWidth: '800px', margin: '0 auto', textAlign: 'center'}}>
+            <h2 className="section-title">4 anos de estudo.<br/>Dezenas de projetos.<br/><span style={{color: 'var(--error)'}}>Rejeitado em 1 segundo.</span></h2>
+            <p className="section-desc">
+              Sua maior frustração é passar anos dominando tecnologias, enviar o currículo e receber um <strong>"Infelizmente, decidimos seguir com outros candidatos"</strong> na mesma hora.
             </p>
+            <div className="glass-card pain-alert">
+              <p>
+                A verdade? <strong>Nenhum ser humano leu seu currículo.</strong> Foi um robô (ATS) que escaneou seu PDF, não encontrou as "palavras-chave invisíveis" e te descartou.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Apresentação do Produto */}
-      <section className="product-info">
-        <div className="responsive-grid content-wrap">
-          <div className="text-content">
-            <h2 className="section-title">O que é o <span className="text-gradient">Linked Bypass AI</span>?</h2>
+      {/* Product Info */}
+      <section className="section-padding">
+        <div className="content-wrap responsive-grid">
+          <div>
+            <h2 className="section-title">O que é o <span className="text-gradient">Bypass AI</span>?</h2>
             <p className="section-desc">
               É uma Inteligência Artificial treinada com os mesmos algoritmos usados por recrutadores das Big Techs.
             </p>
             <p className="section-desc">
-              Em vez de você tentar adivinhar o que está errado, nós te dizemos <strong>exatamente qual frase mudar</strong> para que o algoritmo do LinkedIn passe a recomendar o seu perfil.
+              Em vez de você tentar adivinhar o que está errado, nós te dizemos <strong>exatamente qual frase mudar</strong> para que o algoritmo do LinkedIn e da Gupy passe a recomendar o seu perfil.
             </p>
           </div>
-          <div className="glow-card product-card">
-            <div className="icon">👁️‍🗨️</div>
-            <h3 className="card-title">Engenharia Reversa</h3>
-            <p className="card-desc">Nós simulamos o filtro deles. Se o seu currículo passar pela nossa IA, ele passa na entrevista deles.</p>
+          <div className="glass-card" style={{textAlign: 'center'}}>
+            <span className="product-icon">👁️‍🗨️</span>
+            <h3 style={{fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--text-primary)'}}>Engenharia Reversa</h3>
+            <p style={{color: 'var(--text-secondary)'}}>Nós simulamos o filtro deles. Se o seu currículo passar pela nossa IA, ele passa na entrevista deles.</p>
           </div>
         </div>
       </section>
 
-      {/* Vantagem x Desvantagem */}
-      <section className="comparison-section">
+      {/* Comparison */}
+      <section className="section-padding bg-surface">
         <div className="content-wrap">
-          <h2 className="section-title centered">A Diferença Injusta</h2>
-          
-          <div className="comparison-grid">
-            <div className="minimal-card old-way">
-              <h3 className="card-label red">O Jeito Antigo</h3>
-              <ul>
-                <li>❌ Enviar 50 currículos e não ter resposta.</li>
-                <li>❌ Formatação invisível para robôs.</li>
-                <li>❌ Perder vagas para pessoas com menos código.</li>
+          <h2 className="section-title" style={{textAlign: 'center'}}>A Diferença Injusta</h2>
+          <div className="cards-grid">
+            <div className="glass-card" style={{borderTopColor: 'var(--error)'}}>
+              <h3 style={{color: 'var(--error)', fontSize: '1.25rem', marginBottom: '1.5rem'}}>O Jeito Antigo</h3>
+              <ul className="compare-list">
+                <li><span>❌</span> Enviar 50 currículos e não ter resposta.</li>
+                <li><span>❌</span> Formatação bonita, mas invisível para os robôs.</li>
+                <li><span>❌</span> Perder vagas para pessoas com menos código que você.</li>
               </ul>
             </div>
-            
-            <div className="glow-card minimal-card new-way">
-              <h3 className="card-label blue">Com Linked Bypass</h3>
-              <ul>
-                <li>✅ Aplicar para 5 vagas e fazer 3 entrevistas.</li>
-                <li>✅ Injetar as "Keywords Ocultas" de alta conversão.</li>
-                <li>✅ Hackear o filtro ATS e ir direto para o RH.</li>
+            <div className="glass-card" style={{borderTopColor: 'var(--accent)', background: 'rgba(0, 242, 255, 0.02)'}}>
+              <h3 style={{color: 'var(--accent)', fontSize: '1.25rem', marginBottom: '1.5rem'}}>Com Bypass AI</h3>
+              <ul className="compare-list">
+                <li><span>✅</span> Aplicar para 5 vagas e fazer 3 entrevistas.</li>
+                <li><span>✅</span> Injetar as "Keywords Ocultas" de alta conversão.</li>
+                <li><span>✅</span> Hackear o filtro ATS e ir direto para o RH.</li>
               </ul>
             </div>
           </div>
@@ -132,19 +130,19 @@ export default function LandingPage() {
       </section>
 
       {/* Social Proof */}
-      <section className="testimonials-section">
+      <section className="section-padding">
         <div className="content-wrap">
-          <h2 className="section-title centered">Logs de Sucesso</h2>
-          <div className="features-grid">
+          <h2 className="section-title" style={{textAlign: 'center'}}>Logs de Sucesso</h2>
+          <div className="cards-grid">
             {[
-              { text: "Mudei 3 palavras-chave que a IA sugeriu e meu perfil saltou 40 posições nas buscas.", author: "Thiago M.", role: "Engenheiro de Software" },
-              { text: "Paguei 47 reais e no mês seguinte assinei contrato ganhando 5x mais. O ROI é absurdo.", author: "Mariana C.", role: "Product Manager" },
-              { text: "A IA apontou 7 erros fatais de leitura de ATS. Corrigi e fui chamado pra entrevista.", author: "Lucas S.", role: "Dev Front-end" }
+              { text: "Mudei 3 palavras que a IA sugeriu e meu perfil saltou 40 posições nas buscas.", author: "Thiago M.", role: "Engenheiro de Software" },
+              { text: "Paguei 47 reais e assinei contrato ganhando 5x mais. O ROI é absurdo.", author: "Mariana C.", role: "Product Manager" },
+              { text: "A IA apontou erros fatais de leitura de ATS no meu PDF. Corrigi e fui chamado.", author: "Lucas S.", role: "Dev Front-end" }
             ].map((dep, i) => (
-              <div key={i} className="glow-card minimal-card testimonial">
-                <div className="quote">”</div>
-                <p className="quote-text">{dep.text}</p>
-                <div className="author-info">
+              <div key={i} className="glass-card">
+                <div style={{color: 'var(--accent)', fontSize: '2rem', lineHeight: 1, marginBottom: '1rem'}}>”</div>
+                <p className="testimonial-quote">{dep.text}</p>
+                <div className="testimonial-author">
                   <strong>{dep.author}</strong>
                   <span>{dep.role}</span>
                 </div>
@@ -154,35 +152,37 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Oferta Direta */}
-      <section className="cta-section">
-        <div className="glow-card final-offer">
-          <h2 className="offer-title">O Fim das Rejeições Automáticas</h2>
-          <p className="offer-desc">Pague uma única vez. Use para sempre.</p>
-          
-          <div className="price-tag">
-            <span className="old-price">R$ 197</span>
-            <span className="new-price">R$ 47</span>
+      {/* CTA Section */}
+      <section className="section-padding bg-surface">
+        <div className="content-wrap">
+          <div className="glass-card cta-box">
+            <h2 className="section-title" style={{marginBottom: '1rem'}}>Acesso Vitalício</h2>
+            <p className="section-desc" style={{marginBottom: '0'}}>Liberte seu currículo do cemitério dos algoritmos hoje.</p>
+            
+            <div className="price-display">
+              <span className="old">R$ 197</span>
+              <span className="new">R$ 47</span>
+            </div>
+
+            <ul className="benefits">
+              <li>Análises Ilimitadas via IA</li>
+              <li>Injeção de Keywords ATS</li>
+              <li>Detecção de Falhas de Leitura</li>
+              <li>Atualizações Inclusas</li>
+            </ul>
+
+            <a href={checkoutUrl} className="buy-button accent" style={{width: '100%'}}>
+              LIBERAR MEU ACESSO
+            </a>
+            <p style={{marginTop: '1.5rem', fontSize: '0.85rem', color: 'var(--text-secondary)'}}>
+              Garantia de 7 dias. Pagamento via Cakto.
+            </p>
           </div>
-
-          <ul className="benefits-list">
-            <li>✓ Análises Ilimitadas via IA</li>
-            <li>✓ Injeção de Keywords ATS</li>
-            <li>✓ Detecção de Falhas de Leitura</li>
-            <li>✓ Atualizações Vitalícias</li>
-          </ul>
-
-          <a href={checkoutUrl} className="buy-button full-width">
-            LIBERAR MEU ACESSO AGORA
-          </a>
-          <p className="guarantee-text">
-            Garantia de 7 dias. Pagamento via Cakto.
-          </p>
         </div>
       </section>
 
       <footer className="footer">
-        <p>Linked Bypass AI © 2026. Todos os direitos reservados.</p>
+        Linked Bypass AI © 2026. Todos os direitos reservados.
       </footer>
     </div>
   );
