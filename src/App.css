@@ -640,3 +640,68 @@ body {
     width: 100%;
   }
 }
+
+/* Rejection Email Mockup */
+.rejection-email {
+  max-width: 600px;
+  margin: 3rem auto 0;
+  text-align: left;
+  background: #0a0a0a;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+  transform: rotate(-1deg);
+  transition: transform 0.3s ease;
+}
+
+.rejection-email:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.email-header {
+  background: #111;
+  padding: 10px 15px;
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.email-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.email-dot.red { background: #ff5f56; }
+.email-dot.yellow { background: #ffbd2e; }
+.email-dot.green { background: #27c93f; }
+
+.email-body {
+  padding: 25px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #d1d5db;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.email-body p {
+  margin-bottom: 12px;
+}
+
+.blurred-text {
+  color: transparent;
+  text-shadow: 0 0 8px rgba(255,255,255,0.7);
+  user-select: none;
+  background: rgba(255,255,255,0.05);
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+.highlight-yellow {
+  background-color: rgba(255, 189, 46, 0.2);
+  color: #ffbd2e;
+  padding: 0 4px;
+  border-radius: 2px;
+}

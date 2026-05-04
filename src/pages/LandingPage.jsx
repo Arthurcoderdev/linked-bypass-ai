@@ -126,6 +126,19 @@ export default function LandingPage() {
                 A verdade? <strong>Nenhum ser humano leu seu currículo.</strong> Foi um robô (ATS) que escaneou seu PDF, não encontrou as "palavras-chave invisíveis" e te descartou.
               </p>
             </div>
+
+            <div className="rejection-email">
+              <div className="email-header">
+                <span className="email-dot red"></span>
+                <span className="email-dot yellow"></span>
+                <span className="email-dot green"></span>
+              </div>
+              <div className="email-body">
+                <p>Agradecemos seu interesse na vaga de Estágio em Suporte de Servidores da <span className="blurred-text">Empresa Confidencial</span> em: São Paulo, Brasil.</p>
+                <p><mark className="highlight-yellow">Infelizmente</mark>, não daremos prosseguimento à sua candidatura, mas agradecemos o tempo dispensado e o interesse na <span className="blurred-text">Empresa</span>.</p>
+                <p>Atenciosamente,</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
