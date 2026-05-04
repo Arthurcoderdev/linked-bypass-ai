@@ -55,9 +55,10 @@ export default function LandingPage() {
           
           <div className="terminal-box animate-slide-in" style={{maxWidth: '500px', margin: '0 auto 3rem'}}>
             <div className="typewriter">
-              > Executando engenharia reversa ATS...
+              &gt; Executando engenharia reversa ATS...
             </div>
           </div>
+
 
           <a href={checkoutUrl} className="buy-button animate-slide-in">
             INICIAR BYPASS AGORA
