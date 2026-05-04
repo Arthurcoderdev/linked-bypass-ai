@@ -173,6 +173,11 @@ export default function LandingPage() {
               </ul>
             </div>
           </div>
+          <div style={{textAlign: 'center', marginTop: '4rem'}}>
+            <a href={checkoutUrl} className="buy-button accent">
+              QUERO TER ESSA VANTAGEM
+            </a>
+          </div>
         </div>
       </section>
 
@@ -195,6 +200,12 @@ export default function LandingPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div style={{textAlign: 'center', marginTop: '4rem'}}>
+            <a href={checkoutUrl} className="buy-button accent">
+              QUERO SER O PRÓXIMO APROVADO
+            </a>
           </div>
         </div>
       </section>
