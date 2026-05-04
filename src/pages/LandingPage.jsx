@@ -60,10 +60,8 @@ export default function LandingPage() {
             <a href={checkoutUrl} className="buy-button accent">
               INICIAR BYPASS AGORA
             </a>
-            <p style={{marginTop: '1.5rem', fontSize: '0.85rem', color: 'var(--text-secondary)'}}>
-              PAGAMENTO ÚNICO. ACESSO VITALÍCIO. R$ 47
-            </p>
           </div>
+
         </div>
       </section>
 
