@@ -1,5 +1,11 @@
 import { useState, useEffect } from 'react';
 
+const LinkedInLogo = ({ style }) => (
+  <svg className="blurred-logo" style={style} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+  </svg>
+);
+
 export default function LandingPage() {
   const [timeLeft, setTimeLeft] = useState({ hours: 4, minutes: 22, seconds: 15 });
   const checkoutUrl = "https://pay.cakto.com.br/3fas74x_870881";
@@ -34,7 +40,10 @@ export default function LandingPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="hero">
+      <section className="hero" style={{position: 'relative'}}>
+        <LinkedInLogo style={{ width: '400px', top: '-50px', left: '-100px', opacity: 0.08, transform: 'rotate(-15deg)' }} />
+        <LinkedInLogo style={{ width: '250px', bottom: '100px', right: '5%', opacity: 0.12, animationDelay: '2s' }} />
+
         <div className="cyber-grid"></div>
         <div className="content-wrap">
           <div className="tech-badge animate-slide-in">
@@ -66,8 +75,9 @@ export default function LandingPage() {
       </section>
 
       {/* Pain Section */}
-      <section className="section-padding bg-surface">
-        <div className="content-wrap">
+      <section className="section-padding bg-surface" style={{position: 'relative', overflow: 'hidden'}}>
+        <LinkedInLogo style={{ width: '300px', top: '20%', right: '-50px', opacity: 0.05, filter: 'blur(8px)' }} />
+        <div className="content-wrap" style={{position: 'relative', zIndex: 2}}>
           <div style={{maxWidth: '800px', margin: '0 auto', textAlign: 'center'}}>
             <h2 className="section-title">4 anos de estudo.<br/>Dezenas de projetos.<br/><span style={{color: 'var(--error)'}}>Rejeitado em 1 segundo.</span></h2>
             <p className="section-desc">
@@ -103,8 +113,9 @@ export default function LandingPage() {
       </section>
 
       {/* Comparison */}
-      <section className="section-padding bg-surface">
-        <div className="content-wrap">
+      <section className="section-padding bg-surface" style={{position: 'relative', overflow: 'hidden'}}>
+        <LinkedInLogo style={{ width: '500px', bottom: '-100px', left: '-150px', opacity: 0.04, filter: 'blur(10px)' }} />
+        <div className="content-wrap" style={{position: 'relative', zIndex: 2}}>
           <h2 className="section-title" style={{textAlign: 'center'}}>A Diferença Injusta</h2>
           <div className="cards-grid">
             <div className="glass-card" style={{borderTopColor: 'var(--error)'}}>
