@@ -20,6 +20,19 @@ const FloatingResume = ({ status, style }) => (
   </div>
 );
 
+const CVScannerAnimation = () => (
+  <div className="cv-scanner-container">
+    <div className="cv-scanner-line"></div>
+    <div className="cv-content-line"></div>
+    <div className="cv-content-line medium"></div>
+    <div className="cv-content-line"></div>
+    <div className="cv-content-line short"></div>
+    <div className="status-text-1">LENDO ATS...</div>
+    <div className="status-text-2">INJETANDO...</div>
+    <div className="status-text-3">MATCH! ✅</div>
+  </div>
+);
+
 export default function LandingPage() {
   const [timeLeft, setTimeLeft] = useState({ hours: 4, minutes: 22, seconds: 15 });
   const checkoutUrl = "https://pay.cakto.com.br/3fas74x_870881";
@@ -130,7 +143,7 @@ export default function LandingPage() {
             </p>
           </div>
           <div className="glass-card" style={{textAlign: 'center'}}>
-            <span className="product-icon">👁️‍🗨️</span>
+            <CVScannerAnimation />
             <h3 style={{fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--text-primary)'}}>Engenharia Reversa</h3>
             <p style={{color: 'var(--text-secondary)'}}>Nós simulamos o filtro deles. Se o seu currículo passar pela nossa IA, ele passa na entrevista deles.</p>
           </div>

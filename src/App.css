@@ -407,7 +407,102 @@ body {
   border-color: var(--border-highlight);
 }
 
+/* CV Scanner Animation */
+.cv-scanner-container {
+  width: 120px;
+  height: 160px;
+  background: #050505;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin: 0 auto 2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  animation: cv-border-color 6s infinite;
+}
+
+.cv-scanner-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+  animation: cv-scan 6s infinite;
+  z-index: 10;
+}
+
+.cv-content-line {
+  height: 6px;
+  background: #333;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  animation: cv-improve 6s infinite;
+}
+
+.cv-content-line.short { width: 60%; }
+.cv-content-line.medium { width: 85%; }
+
+.status-text-1, .status-text-2, .status-text-3 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.9);
+  border: 1px solid #333;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+  opacity: 0;
+  z-index: 12;
+}
+
+.status-text-1 { animation: show-state-1 6s infinite; color: #888; }
+.status-text-2 { animation: show-state-2 6s infinite; color: var(--accent); border-color: var(--accent); }
+.status-text-3 { animation: show-state-3 6s infinite; color: var(--success); border-color: var(--success); }
+
+@keyframes cv-border-color {
+  0%, 30% { border-color: #333; box-shadow: none; }
+  31%, 60% { border-color: var(--accent); box-shadow: 0 0 20px rgba(0,242,255,0.2); }
+  61%, 95% { border-color: var(--success); box-shadow: 0 0 20px rgba(34,197,94,0.2); }
+  96%, 100% { border-color: #333; box-shadow: none; }
+}
+
+@keyframes cv-scan {
+  0%, 10% { top: 0; opacity: 1; }
+  35%, 55% { top: 100%; opacity: 1; }
+  60%, 100% { opacity: 0; }
+}
+
+@keyframes cv-improve {
+  0%, 30% { background: #333; }
+  35%, 60% { background: var(--accent); }
+  65%, 95% { background: var(--success); }
+  96%, 100% { background: #333; }
+}
+
+@keyframes show-state-1 {
+  0%, 30% { opacity: 1; }
+  31%, 100% { opacity: 0; }
+}
+@keyframes show-state-2 {
+  0%, 30% { opacity: 0; }
+  31%, 60% { opacity: 1; }
+  61%, 100% { opacity: 0; }
+}
+@keyframes show-state-3 {
+  0%, 60% { opacity: 0; }
+  61%, 95% { opacity: 1; }
+  96%, 100% { opacity: 0; }
+}
+
 /* Specific Sections */
+
 .pain-alert {
   background: rgba(239, 68, 68, 0.05);
   border: 1px solid rgba(239, 68, 68, 0.2);
