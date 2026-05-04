@@ -6,6 +6,20 @@ const LinkedInLogo = ({ style }) => (
   </svg>
 );
 
+const FloatingResume = ({ status, style }) => (
+  <div className={`floating-resume ${status}`} style={style}>
+    <div className="resume-lines">
+      <div className="line title"></div>
+      <div className="line"></div>
+      <div className="line"></div>
+      <div className="line short"></div>
+    </div>
+    <div className={`status-badge ${status}`}>
+      {status === 'rejected' ? '❌' : '✅'}
+    </div>
+  </div>
+);
+
 export default function LandingPage() {
   const [timeLeft, setTimeLeft] = useState({ hours: 4, minutes: 22, seconds: 15 });
   const checkoutUrl = "https://pay.cakto.com.br/3fas74x_870881";
@@ -41,6 +55,11 @@ export default function LandingPage() {
 
       {/* Hero Section */}
       <section className="hero" style={{position: 'relative'}}>
+        {/* Floating Resumes */}
+        <FloatingResume status="rejected" style={{ top: '15%', left: '8%', animationDelay: '0s' }} />
+        <FloatingResume status="rejected" style={{ bottom: '25%', left: '15%', animationDelay: '1.5s', transform: 'scale(0.8) rotate(-10deg)' }} />
+        <FloatingResume status="approved" style={{ top: '25%', right: '10%', animationDelay: '3s', transform: 'scale(1.2) rotate(5deg)' }} />
+
         {/* Hacker Matrix Rain */}
         <div className="matrix-code" style={{left: '5%', animationDelay: '0s'}}>01001000 01100001 01100011 01101011</div>
         <div className="matrix-code" style={{left: '15%', animationDelay: '5s'}}>01100010 01111001 01110000 01100001</div>
