@@ -41,6 +41,12 @@ export default function LandingPage() {
 
       {/* Hero Section */}
       <section className="hero" style={{position: 'relative'}}>
+        {/* Hacker Matrix Rain */}
+        <div className="matrix-code" style={{left: '5%', animationDelay: '0s'}}>01001000 01100001 01100011 01101011</div>
+        <div className="matrix-code" style={{left: '15%', animationDelay: '5s'}}>01100010 01111001 01110000 01100001</div>
+        <div className="matrix-code" style={{right: '10%', animationDelay: '2s'}}>01000001 01010100 01010011 00100000</div>
+        <div className="matrix-code" style={{right: '25%', animationDelay: '7s'}}>11010010 01000111 01010011 11100101</div>
+
         <LinkedInLogo style={{ width: '400px', top: '-50px', left: '-100px', opacity: 0.08, transform: 'rotate(-15deg)' }} />
         <LinkedInLogo style={{ width: '250px', bottom: '100px', right: '5%', opacity: 0.12, animationDelay: '2s' }} />
 
@@ -51,7 +57,7 @@ export default function LandingPage() {
           </div>
           
           <h1 className="hero-title animate-slide-in">
-            Hackeie o algoritmo.<br/>
+            <span className="hacker-flicker" data-text="Hackeie">Hackeie</span> o algoritmo.<br/>
             <span className="text-gradient">Consiga a vaga.</span>
           </h1>
           
