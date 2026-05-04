@@ -25,7 +25,7 @@ function App() {
 
       setAnalysisStep('A IA está processando seu currículo...')
       
-      const response = await fetch('http://localhost:3001/analyze', {
+      const response = await fetch('https://linked-bypass-ai.onrender.com/analyze', {
         method: 'POST',
         body: formData,
       })
